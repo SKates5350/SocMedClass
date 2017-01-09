@@ -1,12 +1,12 @@
 ################################################################
 ## Facebook Data: in-class exercise
-## Author: Pablo Barbera
+## Author: Sean Kates
 ## Social Media and Political Participation
-## Lab 2, January 7th 2014
+## Lab 4, January 9th 2017
 ################################################################
 
 ## first, we change our working directory to where our data is stored
-setwd("~/Dropbox/Teaching/j-term/lab 4/")
+setwd("~/Desktop/Winter Term Course/lab 4
 ## (remember that you can always just serch for the files on the bottom-right panel)
 
 # loading the package
