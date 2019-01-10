@@ -3,12 +3,12 @@
 ## Author: Pablo Barbera
 ## Adapted by Sean Kates
 ## Social Media and Political Participation
-## Lab 3, January 6th 2017
+## Lab 3, January 8th 2018
 ################################################################
 
 ## As usual, before we run anything, we make sure to change the working
 ## directory to where we have all our code and data stored. In my case, it is:
-setwd("~/Desktop/Winter Term Course/lab 3")
+setwd("~/Desktop/Winter Term Course/2019/lab 3")
 ## But it will different for yours! Click on the wheel on the files tab on
 ## the bottom right panel; then choose "set as working directory"; and paste
 ## here in the script what you see on the console
@@ -53,8 +53,8 @@ load("oauth_token.Rdata")
 ## The first example shows how to collect tweets that mention a given keyword
 ## in real time, as they are being published, with the 'filterStream' command
 
-filterStream(file.name="obama_tweets.json", track=c("obama", "biden"), 
-    tweets=100, oauth=my_oauth)
+filterStream(file.name="trumptweets.json", track="trump", 
+    timeout=75, oauth=my_oauth)
 
 ## Note the options:
 ## FILE.NAME indicates the file in your disk where the tweets will be downloaded
@@ -64,7 +64,7 @@ filterStream(file.name="obama_tweets.json", track=c("obama", "biden"),
 
 ## Once it has finished, we can open it in R as a data frame with the
 ## "parseTweets" function
-tweets <- parseTweets("obama_tweets.json")
+tweets <- parseTweets("trumptweets.json")
 
 ## Click on the top right panel in "tweets" to see the structure of this
 ## data frame.
@@ -86,10 +86,6 @@ tweets <- parseTweets("obama_tweets.json")
 filterStream(file.name="tweets_geo.json", locations=c(38, 11, 58, 35), 
     timeout=60, oauth=my_oauth)
 
-## Note that now we choose a different option, "TIMEOUT", which indicates for
-## how many seconds we're going to keep open the connection to Twitter.
-
-## But we could have chosen also tweets=100 if we prefer.
 
 ## We can do as before and open the tweets in R
 tweets <- parseTweets("tweets_geo.json")
@@ -123,7 +119,7 @@ tweets = parseTweets("tweets_nytimes.json")
 ## Let's also grab the Donald's latest tweets
 
 getTimeline(filename="tweets_trump.json", screen_name="realDonaldTrump", 
-    n=1000, oauth=my_oauth, trim_user="false", sleep = 0.5)
+    n=1000, oauth=my_oauth, sleep = 0.5)
 
 ## Now you know how it goes...
 tweets = parseTweets("tweets_trump.json")

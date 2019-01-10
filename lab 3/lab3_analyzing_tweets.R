@@ -3,12 +3,12 @@
 ## Author: Pablo Barbera
 ## Adapted by Sean Kates
 ## Social Media and Political Participation
-## Lab 3, January 6th 2017
+## Lab 3, January 8th 2018
 ################################################################
 
 ## As usual, before we run anything, we make sure to change the working
 ## directory to where we have all our code and data stored. In my case, it is:
-setwd("~/Desktop/Winter Term Course/lab 3")
+setwd("~/Desktop/Winter Term Course/2019/lab 3")
 ## But it will different for yours! Click on the wheel on the files tab on
 ## the bottom right panel; then choose "set as working directory"; and paste
 ## here in the script what you see on the console
